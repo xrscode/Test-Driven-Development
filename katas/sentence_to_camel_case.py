@@ -6,7 +6,7 @@ def camel_case(string, boolean):
 
     split = string.split(' ')
 
-    if boolean == True:
+    if boolean:
         for index, word in enumerate(split):
             split[index] = word[0].upper() + word[1:].lower()
     else:
