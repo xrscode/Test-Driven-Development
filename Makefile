@@ -54,3 +54,6 @@ run-flake:
 unit-test:
 	$(call execute_in_env, PYTHONPATH=${PYTHONPATH} pytest -v)
 
+set_path:
+	$(call execute_in_env PYTHONPATH=${pwd})
+

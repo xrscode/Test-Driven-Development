@@ -13,7 +13,7 @@ e.g: getYearsOfGrowth(1000, 2000, 2, 12) # 25
 def test_end_not_larger_than_start():
     with pytest.raises(ValueError) as v:
         invoke = get_years_of_growth(10, 5, 5, 5)
-        assert str(v.value) == 'End year can not be less than start year!'
+    assert str(v.value) == 'End year can not be less than start year!'
 
 
 def test_start_must_be_integer():
@@ -29,19 +29,19 @@ def test_start_must_be_integer():
 def test_end_is_integer():
     with pytest.raises(TypeError) as e:
         end = get_years_of_growth(5, 'a', 5, 5)
-        assert str(e.value) == 'Only integers accepted!'
+    assert str(e.value) == 'Only integers accepted!'
 
 
 def test_percent_is_integer():
     with pytest.raises(TypeError) as e:
         percent = get_years_of_growth(5, 5, 'a', 5)
-        assert str(e.value) == 'Only integers accepted!'
+    assert str(e.value) == 'Only integers accepted!'
 
 
 def test_migration_is_integer():
     with pytest.raises(TypeError) as e:
         migration = get_years_of_growth(5, 5, 5, 'a')
-        assert str(e.value) == 'Only integers accepted!'
+    assert str(e.value) == 'Only integers accepted!'
 
 
 def test_start_100_end_101_percent_1():

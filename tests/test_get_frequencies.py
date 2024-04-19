@@ -15,7 +15,7 @@ Dictionary with frequency of individual chars.
 def test_rejects_non_strings():
     with pytest.raises(ValueError) as v:
         invoke = get_frequencies(12345)
-        assert str(v.value) == 'Argument must be a string!'
+    assert str(v.value) == 'Argument must be a string!'
 
 
 def test_returns_dictionary():
