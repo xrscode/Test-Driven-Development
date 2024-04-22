@@ -13,9 +13,7 @@ def bubble_sort(ls):
            if index == len(ls) - 1:
                continue
            elif char > ls[index + 1]:
-               high = char
-               low = ls[index + 1]
-               ls[index] = low
-               ls[index + 1] = high
+               ls[index] = ls[index + 1]
+               ls[index + 1] = char
                switch = 1
     return ls
