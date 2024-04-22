@@ -24,6 +24,10 @@ def test_returns_ascii_val_for_one_char():
     invoke = sum_ascii(['a'])
     assert invoke == '97'
 
+def test_converts_to_lower_case():
+    invoke = sum_ascii(['A', 'a'])
+    assert invoke == 'a = 97'
+
 def test_returns_highest_ascii_char():
     invoke = sum_ascii(['a', 'b'])
     assert invoke == 'b = 98'
@@ -34,4 +38,8 @@ def test_returns_highest_ascii_char_no_duplicates():
 
 def test_returns_more_names_if_ascii_same():
     invoke = sum_ascii(['abc', 'cba'])
-    assert invoke == 'b = 98'
+    assert invoke == 'cba, abc = 294'
+
+def test_returns_more_names_if_ascii_same_multiple_names():
+    invoke = sum_ascii(['Dylan', 'Dylan', 'Philippa', 'Appiliph'])
+    assert invoke == 'Philippa, Appiliph = 855'
