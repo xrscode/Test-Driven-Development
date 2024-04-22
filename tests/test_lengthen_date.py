@@ -50,3 +50,8 @@ def test_performs_mild_format_correction():
 def test_checks_day_battle_of_hastings():
     invoke = lengthen_date('14.10.1066')
     assert invoke == 'Sunday 14th October 1066'
+
+
+def test_checks_different_format_date():
+    invoke = lengthen_date('19.4.2024')
+    assert invoke == 'Friday 19th April 2024'

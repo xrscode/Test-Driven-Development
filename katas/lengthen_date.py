@@ -35,3 +35,5 @@ def lengthen_date(date):
     time_str = datetime.strftime(obj, f"%A %d{suffix[day]} %B %Y")
 
     return time_str
+
+print('Jackys birthday is;', lengthen_date('21.04.1957'))
