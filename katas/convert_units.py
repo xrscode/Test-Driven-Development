@@ -19,6 +19,3 @@ def convert(num):
         units.append(num)
 
     return units
-
-
-print(convert(235))
