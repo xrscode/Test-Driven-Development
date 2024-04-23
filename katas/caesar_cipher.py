@@ -17,19 +17,14 @@ def caesar(a, b):
         letter = ord(letter)
         letter += b
 
-        if b == 0:
-            return a
-        elif b < 0:
-            multiple = math.ceil((letter - 122)/57)
-            c = letter + (58 * multiple)
+        if b < 0:
+            multiple = math.floor((122-letter)/58)
+            c = letter + (multiple * 58)
             new_str += chr(c)
-
         elif b > 0:
             multiple = math.ceil((letter - 122)/57)
             c = letter - (58 * multiple)
             new_str += chr(c)
+        else:
+            return a
     return new_str
-
-
-print(caesar('z', -1), 'y')
-print(caesar('A', -1), 'z')

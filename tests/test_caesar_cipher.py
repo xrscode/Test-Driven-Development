@@ -67,3 +67,8 @@ def test_ignores_non_alphabetical_chars():
 def test_for_sentence_positive_displacement():
     invoke = caesar('Hello World!', 10)
     assert invoke == 'Rovvy ayBvn!'
+
+
+def test_for_sentence_negative_displacement():
+    invoke = caesar('Hello World!', 10)
+    assert invoke == 'Rovvy ayBvn!'
