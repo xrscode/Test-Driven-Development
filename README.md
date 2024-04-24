@@ -19,4 +19,4 @@ To initialise unit testing into terminal type:
 1. make unit-test
 
 To make code more pythonic and run autopep8 type:
-1. make autopep8
+1. make run-autopep8

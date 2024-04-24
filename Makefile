@@ -49,12 +49,12 @@ requirements: create-environment
 run-flake:
 	$(call execute_in_env, flake8  ./katas/*.py)
 
-autopep8:
+run-autopep8:
 	$(call execute_in_env, autopep8 --in-place --aggressive --aggressive  ./katas/*.py)
 	
 
 # ## Run the all unit tests
-unit-test:
+run-unit-test:
 	$(call execute_in_env, PYTHONPATH=${PYTHONPATH} pytest -v)
 
 set_path:
