@@ -29,5 +29,4 @@ def multiplication_table(num):
         while len(x) < len(ls):
             last = x[-1:][0]
             x.append(last + x[0])
-
     return ls
