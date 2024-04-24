@@ -18,11 +18,11 @@ def caesar(a, b):
         letter += b
 
         if b < 0:
-            multiple = math.floor((122-letter)/58)
+            multiple = math.floor((122 - letter) / 58)
             c = letter + (multiple * 58)
             new_str += chr(c)
         elif b > 0:
-            multiple = math.ceil((letter - 122)/57)
+            multiple = math.ceil((letter - 122) / 57)
             c = letter - (58 * multiple)
             new_str += chr(c)
         else:

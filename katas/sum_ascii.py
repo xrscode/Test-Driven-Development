@@ -18,7 +18,7 @@ def sum_ascii(ls):
         if total > highest:
             highest = total
             name_highest = [name]
-        
+
         elif total == highest:
             name_highest.append(name)
 

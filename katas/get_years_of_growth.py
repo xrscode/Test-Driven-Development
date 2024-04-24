@@ -11,6 +11,6 @@ def get_years_of_growth(start, end, percent, migration):
 
     while start < end:
         years += 1
-        start *= 1 + percent/100
+        start *= 1 + percent / 100
         start += migration
     return years

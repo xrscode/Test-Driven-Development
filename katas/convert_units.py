@@ -1,4 +1,4 @@
-import math
+# import math
 
 # Option 1
 # def convert(num):
@@ -21,12 +21,10 @@ import math
 #     return units
 
 # Option 2:
-
-
 def convert(num):
     if not isinstance(num, int) or num <= 0:
         raise TypeError('Must be an integer larger than 1!')
     num_str = str(num)
-    number_list = [int(x + '0' * (len(num_str[i:])-1))
+    number_list = [int(x + '0' * (len(num_str[i:]) - 1))
                    for i, x in enumerate(num_str) if x != '0']
     return number_list

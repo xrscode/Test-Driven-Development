@@ -48,6 +48,9 @@ requirements: create-environment
 # ## Run the flake8 code check
 run-flake:
 	$(call execute_in_env, flake8  ./katas/*.py)
+
+autopep8:
+	$(call execute_in_env, autopep8 --in-place --aggressive --aggressive  ./katas/*.py)
 	
 
 # ## Run the all unit tests
