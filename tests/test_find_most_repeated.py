@@ -23,6 +23,11 @@ def test_returns_dictionary():
     assert invoke == {'elements': ['a'], 'repeats': 1}
 
 
+def test_returns_dictionary_no_elements():
+    invoke = repeated([])
+    assert invoke == {'elements': [], 'repeats': 0}
+
+
 def test_returns_max_number_of_elements():
     invoke = repeated(['a', 'a', 'a', 'b', 'c'])
     assert invoke == {'elements': ['a'], 'repeats': 3}

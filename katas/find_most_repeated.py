@@ -2,6 +2,7 @@ def repeated(lst):
     """
     Args:
     Flat list composed of strings or numbers
+    ['foo', 'foo', 'dog']
 
     Returns:
     A dictionary showing most repeated
@@ -9,9 +10,10 @@ def repeated(lst):
     """
     if not isinstance(lst, list):
         raise TypeError('List only!')
-    else:
-        if not all((isinstance(x, int) or isinstance(x, str)) and not isinstance(x, bool) for x in lst):
-            raise ValueError('Only string or integers!')
+    elif not all((isinstance(x, int) or isinstance(x, str)) and not isinstance(x, bool) for x in lst):
+        raise ValueError('Only string or integers!')
+    elif len(lst) == 0:
+        return {'elements': [], 'repeats': 0}
 
     dict = {}
 
