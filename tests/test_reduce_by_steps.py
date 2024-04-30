@@ -38,3 +38,17 @@ def test_final_argument_must_be_int_or_str():
                 return 1
             reduce(myfunc, [], value)
         assert str(t.value) == 'Int or string for final argument!'
+
+
+def test_number_function():
+    numbers = [5, 5, 4]
+    intial_value = 1
+    invoke = reduce(multiply, numbers, intial_value)
+    assert invoke == 100
+
+
+def test_word_function():
+    words = ['Let\'s', 'get', 'down', 'to', 'business']
+    initial_value = ''
+    invoke = reduce(sentence, words, initial_value)
+    assert invoke == """Let's get down to business"""

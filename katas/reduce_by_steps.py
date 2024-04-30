@@ -6,7 +6,7 @@ def reduce(f, l, i):
     - Initial value.
 
     Returns:
-    - List reduced to single string or number. 
+    - List reduced to single string or number.
     - ['Let', 'us', 'work'] = 'Let us work'
     - [5, 4, 3, 2, 1] = 15
     """
@@ -24,5 +24,9 @@ def reduce(f, l, i):
 
     for x in l:
         accumulator = f(accumulator, x)
+
+    if isinstance(accumulator, str):
+        stripped = accumulator.strip()
+        return stripped
 
     return accumulator

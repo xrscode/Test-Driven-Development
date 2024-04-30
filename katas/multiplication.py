@@ -3,7 +3,9 @@ def multiplication_table(num):
     ARGS:
     - Number
     RETURNS:
-    Nested array representation of the multiplication table, including headlings of the table's rows and columns.
+    Nested array representation of the
+    multiplication table, including
+    headlings of the table's rows and columns.
     """
     if not isinstance(num, int) or isinstance(num, bool):
         raise TypeError('Integer only!')
