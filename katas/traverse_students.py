@@ -7,7 +7,7 @@ def traverse_students(student, directions):
     # ['right', 'right', 'up', 'left', 'down']
 
     Returns:
-    A list of all students passed over. 
+    A list of all students passed over.
     """
     if not isinstance(student, list):
         raise TypeError('List of lists only!')

@@ -6,7 +6,7 @@ def encrypt(string, integer):
     Returns:
     Given string S and integer N:
     function concatenates all odd-indexed characters
-    of S with all the even-index characters of S. 
+    of S with all the even-index characters of S.
     Repeats N times.
     """
     if not isinstance(string, str):

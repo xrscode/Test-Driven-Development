@@ -19,7 +19,7 @@ def crack(string):
             raise ve
 
     # Extract start of code:
-    start = string[:-(len(code))+2]
+    start = string[:-(len(code)) + 2]
 
     common_dict = {}
 
@@ -53,8 +53,11 @@ def crack(string):
             else:
                 break
 
+    # Create string out of sorted code
     sorted_code = ''.join(sorted(code))
 
-    if ''.join(sorted_code) == code and all(char in common_list for char in code):
+    # If code is alphabetical and all letters are in common_list:
+    if ''.join(sorted_code) == code and all(
+            char in common_list for char in code):
         return True
     return False

@@ -1,10 +1,10 @@
 def shift(string, integer):
     """
     Args:
-    String and integer. 
+    String and integer.
 
     Returns:
-    String where all vowels shifted by integer amount. 
+    String where all vowels shifted by integer amount.
 
     Hello, 1 >  Holle
     """

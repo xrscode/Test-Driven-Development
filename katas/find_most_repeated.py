@@ -10,7 +10,8 @@ def repeated(lst):
     """
     if not isinstance(lst, list):
         raise TypeError('List only!')
-    elif not all((isinstance(x, int) or isinstance(x, str)) and not isinstance(x, bool) for x in lst):
+    elif not all((isinstance(x, int) or isinstance(x, str))
+                 and not isinstance(x, bool) for x in lst):
         raise ValueError('Only string or integers!')
     elif len(lst) == 0:
         return {'elements': [], 'repeats': 0}

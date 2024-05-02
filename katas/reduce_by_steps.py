@@ -1,4 +1,4 @@
-def reduce(f, l, i):
+def reduce(f, lst, i):
     """
     Args:
     - Callable function.
@@ -14,7 +14,7 @@ def reduce(f, l, i):
         raise TypeError('Function required for first argument!')
     pass
 
-    if not isinstance(l, list):
+    if not isinstance(lst, list):
         raise TypeError('List required for second argument!')
 
     if not (isinstance(i, str) or isinstance(i, int)) or isinstance(i, bool):
@@ -22,7 +22,7 @@ def reduce(f, l, i):
 
     accumulator = i
 
-    for x in l:
+    for x in lst:
         accumulator = f(accumulator, x)
 
     if isinstance(accumulator, str):
