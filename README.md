@@ -13,10 +13,10 @@ Into the terminal:
 
 <!-- Usage -->
 To assess pythonic language into terminal type:
-1. make run-flake
+    make run-flake
 
 To initialise unit testing into terminal type:
-1. make unit-test
+    make unit-test
 
 To make code more pythonic and run autopep8 type:
-1. make run-autopep8
+    make run-autopep8
