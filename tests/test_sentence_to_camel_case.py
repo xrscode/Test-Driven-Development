@@ -1,26 +1,26 @@
 from katas.sentence_to_camel_case import camel_case
 import pytest
-"""
-## Args:
-String and Boolean
----
-## Returns:
----
-Sentence to UpperCamelCase if True.
-Sentence to lowerCamelCase if False.
-"""
 
 
 def test_first_argument_is_string():
-    with pytest.raises(ValueError) as v:
-        invoke = camel_case(1, True)
-        assert str(v.value()) == 'First argument must be a string!'
+    """
+    Error handling test.  
+    Ensures that the first argument is string.
+    """
+    values = [False, True, None, [], {}, 0, 1]
+    # Iterate through values and call function:
+    for value in values:
+        with pytest.raises(ValueError) as v:
+            camel_case(value, False)
+    assert str(v.value) == 'First argument must be a string!'
 
 
 def test_second_argument_is_boolean():
-    with pytest.raises(ValueError) as v:
-        invoke = camel_case('hello', 'False')
-        assert str(v.value()) == 'Second argument must be a boolean!'
+    values = [{}, 0, 1, 'True', 'False', 'true', 'false', [], (), None]
+    for value in values:
+        with pytest.raises(ValueError) as v:
+            camel_case('dylan', value)
+    assert str(v.value) == 'Second argument must be a boolean!'
 
 
 def test_single_lower_and_uppercase_to_uppercase():
